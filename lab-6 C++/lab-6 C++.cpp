@@ -11,28 +11,30 @@ private:
     int age;
     string gender;
     double scholarship;
+    float weight;
+    float height;
 
 public:
-    Student(int studentAge, const std::string& studentGender, double studentScholarship)
-        : age(studentAge), gender(studentGender), scholarship(studentScholarship) 
+    Student(int studentAge, const string& studentGender, double studentScholarship, float weight, float height)
+        : age(studentAge), gender(studentGender), scholarship(studentScholarship), weight(weight), height(height)
     {
         printf("Called constructor with parameters\n");
     }
 
-    Student() : age(0), gender(""), scholarship(0.0) 
+    Student() : age(0), gender(""), scholarship(0.0), weight(78.56), height(178.45)
     {
-        std::cout << "called default constructor\n";
+        cout << "called default constructor\n";
     }
 
     Student(const Student& other)
-        : age(other.age), gender(other.gender), scholarship(other.scholarship) 
+        : age(other.age), gender(other.gender), scholarship(other.scholarship), weight(weight), height(height)
     {
-        std::cout << "Called copy constructor\n";
+        cout << "Called copy constructor\n";
     }
 
     ~Student() 
     {
-        std::cout << "Called destructor\n";
+        cout << "Called destructor\n";
     }
 
     int getAge() const 
@@ -45,11 +47,20 @@ public:
         return gender;
     }
 
-    double getScholarship() const 
+    float getScholarship() const 
     {
         return scholarship;
     }
 
+    float getWeight()
+    {
+        return weight;
+    }
+
+    float getHeight()
+    {
+        return height;
+    }
 
     void setAge(int studentAge) 
     {
@@ -66,18 +77,27 @@ public:
         scholarship = studentScholarship;
     }
 
+    void setWeight(float weight)
+    {
+        this->weight = weight;
+    }
+
+    void setHeight(float height)
+    {
+        this->height = height;
+    }
 
     void inputData() 
     {
-        std::cout << "Enter age: ";
-        std::cin >> age;
+        cout << "Enter age: ";
+        cin >> age;
 
-        std::cout << "Enter gender: ";
-        std::cin.ignore(); 
-        std::getline(std::cin, gender);
+        cout << "Enter gender: ";
+        cin.ignore(); 
+        getline(cin, gender);
 
-        std::cout << "Enter scolarship: ";
-        std::cin >> scholarship;
+        cout << "Enter scolarship: ";
+        cin >> scholarship;
     }
 
     void displayInfo() 
@@ -85,6 +105,8 @@ public:
         cout << "Age: " << age << endl;
         cout << "Gender: " << gender << endl;
         cout << "scolarship: " << scholarship << endl;
+        cout << "weight" << weight << endl;
+        cout << "height" << height << endl;
     }
 };
 
@@ -93,26 +115,29 @@ int main(void)
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
 
-    Student student1(20, "Male", 1000.0);
-    Student student2(22, "Female", 1200.0);
+    Student student1(20, "Male", 1000.0, 34, 76.8);
+    Student student2(22, "Female", 1200.0, 56, 76.5);
 
-    std::cout << "Enter information about 1 student:\n";
+    student1.displayInfo();
+    student2.displayInfo();
+
+    cout << "Enter information about 1 student:\n";
     student1.inputData();
 
-    std::cout << std::endl; 
+    cout << endl; 
 
     
-    std::cout << "Enter information about 2 student:\n";
+    cout << "Enter information about 2 student:\n";
     student2.inputData();
 
-    std::cout << std::endl; 
+    cout << endl; 
 
-    std::cout << "Information about 1 student:\n";
+    cout << "Information about 1 student:\n";
     student1.displayInfo();
 
-    std::cout << std::endl; 
+    cout << endl; 
 
-    std::cout << "Information about 2 student:\n";
+    cout << "Information about 2 student:\n";
     student2.displayInfo();
 
     student1.setAge(23);
@@ -123,26 +148,26 @@ int main(void)
     student2.setGender("Male");
     student2.setScholarship(1200.0);
 
-    std::cout << "Information about 1 student:\n";
+    cout << "Information about 1 student:\n";
     student1.displayInfo();
 
-    std::cout << std::endl;
+    cout << endl;
 
-    std::cout << "Information about 2 student\n";
+    cout << "Information about 2 student\n";
     student2.displayInfo();
 
 
-    std::cout << "Display information with geters:\n";
-    std::cout << "Age: " << student1.getAge() << std::endl;
-    std::cout << "Gender: " << student1.getGender() << std::endl;
-    std::cout << "Scolarship: " << student1.getScholarship() << std::endl;
+    cout << "Display information with geters:\n";
+    cout << "Age: " << student1.getAge() << std::endl;
+    cout << "Gender: " << student1.getGender() << std::endl;
+    cout << "Scolarship: " << student1.getScholarship() << std::endl;
 
-    std::cout << std::endl;
+    cout << endl;
 
-    std::cout << "Display information with geters:\n";
-    std::cout << "Age: " << student2.getAge() << std::endl;
-    std::cout << "Gender: " << student2.getGender() << std::endl;
-    std::cout << "Scolarship: " << student2.getScholarship() << std::endl;
+    cout << "Display information with geters:\n";
+    cout << "Age: " << student2.getAge() << std::endl;
+    cout << "Gender: " << student2.getGender() << std::endl;
+    cout << "Scolarship: " << student2.getScholarship() << endl;
 
 
 
@@ -150,9 +175,9 @@ int main(void)
     double totalScholarship = student1.getScholarship() + student2.getScholarship();
     double averageAge = static_cast<double>(totalAge) / 2;
 
-    std::cout << std::endl;
-    std::cout << "Average age: " << averageAge << std::endl;
-    std::cout << "Total scolarship: " << totalScholarship << std::endl;
+    cout << endl;
+    cout << "Average age: " << averageAge << endl;
+    cout << "Total scolarship: " << totalScholarship << endl;
 
     cout << "class Date";
 
@@ -162,19 +187,19 @@ int main(void)
 
     if (date.isValidDate()) 
     {
-        std::cout << "This date is correct.\n";
+        cout << "This date is correct.\n";
         if (date.isLeapYear()) 
         {
-            std::cout << "This is a leap year.\n";
+            cout << "This is a leap year.\n";
         }
         else 
         {
-            std::cout << "this year is not leap.\n";
+            cout << "this year is not leap.\n";
         }
     }
     else 
     {
-        std::cout << "This date is correct.\n";
+        cout << "This date is correct.\n";
     }
 
     return 0;

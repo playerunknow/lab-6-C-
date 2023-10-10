@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 class Date {
 private:
     int day;
@@ -47,9 +49,9 @@ public:
 
     void printDate() const 
     {
-        std::cout << day << "." << month << "." << year << std::endl;
-        std::cout << day << "/" << month << "/" << year << std::endl;
-        std::string monthName;
+        cout << day << "." << month << "." << year << endl;
+        cout << day << "/" << month << "/" << year << endl;
+        string monthName;
         switch (month) 
         {
         case 1: monthName = "Jan"; break;
@@ -66,6 +68,6 @@ public:
         case 12: monthName = "Dec"; break;
         default: monthName = "Invalid"; break;
         }
-        std::cout << monthName << "-" << day << "-" << year << std::endl;
+        cout << monthName << "-" << day << "-" << year << endl;
     }
 };
