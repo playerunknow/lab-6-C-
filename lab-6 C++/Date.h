@@ -4,7 +4,8 @@
 
 using namespace std;
 
-class Date {
+class Date 
+{
 private:
     int day;
     int month;
