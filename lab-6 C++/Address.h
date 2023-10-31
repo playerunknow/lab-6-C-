@@ -16,6 +16,8 @@ public:
     Address(const string& studentStreet, const string& studentCity, const string& studentState, const string& studentPostalCode)
         : street(studentStreet), city(studentCity), state(studentState), postalCode(studentPostalCode) {}
 
+    Address() : Address("street", "City", "State", "34534543") {}
+
     void setStreet(const string& studentStreet)
     {
         street = studentStreet;
@@ -73,9 +75,9 @@ public:
 
     void displayAddress()
     {
-        cout << "Street: " << street << endl;
-        cout << "City: " << city << endl;
-        cout << "State: " << state << endl;
-        cout << "Postal Code: " << postalCode << endl;
+        cout << "Street: " << getStreet() << endl;
+        cout << "City: " << getCity() << endl;
+        cout << "State: " << getState() << endl;
+        cout << "Postal Code: " << getPostalCode() << endl;
     }
 };

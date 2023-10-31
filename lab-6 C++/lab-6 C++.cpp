@@ -13,7 +13,7 @@ int main(void)
 {
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
-    Student student1(20, "Male", 1000.0, 34, 76.8, "456456 Main St", "Cityville", "Canada", "5555");
+    /*Student student1(20, "Male", 1000.0, 34, 76.8, "456456 Main St", "Cityville", "Canada", "5555");
     Student student2(22, "Female", 1200.0, 56, 76.5, "456456 Street", "qwerty", "Canada", "88888");
 
     student1.displayInfo();
@@ -99,5 +99,5 @@ int main(void)
         cout << "This date is correct.\n";
     }
 
-    return 0;
+    return 0;*/
 }
