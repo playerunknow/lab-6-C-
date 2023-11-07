@@ -6,6 +6,7 @@
 #include "Address.h"
 #include "Student.h"
 #include "Teacher.h"
+#include "HumanList.h"
 
 using namespace std;
 
@@ -13,6 +14,38 @@ int main(void)
 {
     SetConsoleOutputCP(1251);
     SetConsoleCP(1251);
+
+    HumanList HumanList;
+
+    Human human1(40, 1, Address("Country", "City", "asda", "2323423"), "Role", 23, 435);
+    Human human2(32, 1, Address("Country", "City", "asda", "2323423"), "Role", 23, 435);
+    Human human3(56, 1, Address("Country", "City", "asda", "2323423"), "Role", 23, 435);
+
+    Student student(233, "asdfas");
+    student.displayInfo();
+
+    Teacher teacher1(43, 0);
+    Teacher teacher2(13, 1);
+
+    HumanList.addHuman(human1);
+    HumanList.addHuman(human2);
+    HumanList.addHuman(human3);
+
+    HumanList.addTeacher(teacher1);
+    HumanList.addTeacher(teacher2);
+
+    HumanList.printHumansInfo();
+    HumanList.printTeachersInfo();
+
+
+
+
+
+
+
+
+
+
     /*Student student1(20, "Male", 1000.0, 34, 76.8, "456456 Main St", "Cityville", "Canada", "5555");
     Student student2(22, "Female", 1200.0, 56, 76.5, "456456 Street", "qwerty", "Canada", "88888");
 

@@ -16,7 +16,7 @@ private:
     float height;
 
 public:
-    Human(int age, bool gender, Address address = Address(), string role, float weight, float height)
+    Human(int age = 10, bool gender = 1, Address address = Address(), string role = "asdas", float weight =  3, float height = 5)
     {
         this->age = age;
         this->gender = gender;
@@ -26,7 +26,7 @@ public:
         this->height = height;
     }
 
-    Human() : Human(20, 1, address, "Role", 80, 180) {}
+    //Human() : Human(20, 1, address, "Role", 80, 180) {}
 
     int getAge() const { return age; }
     string getGender() const { return (gender ? "male" : "female"); }
@@ -51,7 +51,7 @@ public:
         cout << "Weight - " << weight << endl;
         cout << "Height - " << height << endl;
         cout << "Address: ";
-        getAddress().displayAddress();
+        //address.displayAddress();
         cout << endl;
     }
 
