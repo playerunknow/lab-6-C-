@@ -38,6 +38,8 @@ public:
     {
         cout << "Enter scolarship: ";
         cin >> scholarship;
+        cout << "Enter name of the group: ";
+        cin >> nameOfGroup;
     }
 
     void displayInfo()

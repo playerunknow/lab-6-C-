@@ -9,6 +9,7 @@ class Teacher : public Human
 {
 private:
     double salary;
+
 public:
     Teacher(double salary = 0, int age = 34, bool gender = 1, Address address = Address()) : Human(age, gender, address, "Teacher", 84, 184)
     {
@@ -28,7 +29,7 @@ public:
 
     void TeacherInfo()
     {
-        
+        cout << "Salary" << getSalary();
         printInfo();
     }
 

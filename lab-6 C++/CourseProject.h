@@ -22,4 +22,18 @@ public:
 		this->endingDate = endingDate;
 		this->description = description;
 	}
+
+
+
+
+	void showCourseProject()
+	{
+		cout << "Begining date of the project: ";
+		beginningDate.printDate();
+		cout << "deadline of the project: ";
+		endingDate.printDate();
+		cout << "description " << description << endl;
+	}
+
+	~CourseProject() {}
 };

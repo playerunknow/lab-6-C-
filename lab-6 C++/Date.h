@@ -48,7 +48,7 @@ public:
 
     bool isLeapYear() const { return ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0));}
 
-    void printDate() const 
+    void printFullDate() const 
     {
         cout << day << "." << month << "." << year << endl;
         cout << day << "/" << month << "/" << year << endl;
@@ -70,5 +70,11 @@ public:
         default: monthName = "Invalid"; break;
         }
         cout << monthName << "-" << day << "-" << year << endl;
+    }
+
+    void printDate() const
+    {
+        cout << day << "." << month << "." << year << endl;
+        cout << day << "/" << month << "/" << year << endl;
     }
 };
