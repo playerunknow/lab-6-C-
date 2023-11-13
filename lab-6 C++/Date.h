@@ -17,9 +17,7 @@ public:
     Date(int d, int m, int y) : day(d), month(m), year(y) {}
 
     int getDay() const {return day;}
-
     int getMonth() const {return month;}
-
     int getYear() const {return year;}
 
     bool isValidDate() const 

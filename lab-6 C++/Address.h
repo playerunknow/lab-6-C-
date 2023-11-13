@@ -23,17 +23,14 @@ public:
     {
         street = studentStreet;
     }
-
     void setCity(const string& studentCity)
     {
         city = studentCity;
     }
-
     void setState(const string& studentState)
     {
         state = studentState;
     }
-
     void setPostalCode(const string& studentPostalCode)
     {
         postalCode = studentPostalCode;
@@ -43,17 +40,14 @@ public:
     {
         return street;
     }
-
     string getCity() const
     {
         return city;
     }
-
     string getState() const
     {
         return state;
     }
-
     string getPostalCode() const
     {
         return postalCode;

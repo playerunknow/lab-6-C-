@@ -28,10 +28,18 @@ public:
     {
         return scholarship;
     }
+    string getNameOfGroup() const
+    { 
+        return nameOfGroup;
+    }
 
     void setScholarship(double studentScholarship)
     {
         scholarship = studentScholarship;
+    }
+    void setNameOfGroup(string newName)
+    {
+        nameOfGroup = newName;
     }
 
     void inputData()

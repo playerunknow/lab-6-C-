@@ -23,11 +23,27 @@ public:
 		this->description = description;
 	}
 
+	string getName() const
+	{
+		return name;
+	}
+	string getDescription() const
+	{
+		return description;
+	}
 
-
+	void setName(string newName)
+	{
+		name = newName;
+	}
+	void setDescription(string description)
+	{
+		this->description = description;
+	}
 
 	void showCourseProject()
 	{
+		cout << "Name" << name << endl;
 		cout << "Begining date of the project: ";
 		beginningDate.printDate();
 		cout << "deadline of the project: ";
